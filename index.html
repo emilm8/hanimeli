@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hanımeli – Ev Yapımı Yemekler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f7f0; --card:#ffffff; --ink:#26382e; --muted:#5d6f63;
+  --leaf:#2f5d43; --honey:#f0b83a; --blush:#f2a9a1; --line:#d9e4d6;
+  --serif:"Young Serif",Georgia,"Times New Roman",serif;
+  --sans:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#17221b;--card:#203027;--ink:#eaf1e8;--muted:#a9bbad;--leaf:#8cc7a0;--line:#2e4136}
+}
+:root[data-theme="dark"]{--bg:#17221b;--card:#203027;--ink:#eaf1e8;--muted:#a9bbad;--leaf:#8cc7a0;--line:#2e4136}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:10px}
+.logo{font-family:var(--serif);font-size:1.7rem;text-decoration:none;color:var(--leaf)}
+nav a{margin-left:20px;text-decoration:none;font-weight:600;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:34px 0 60px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.3rem,6vw,3.9rem);line-height:1.1;margin:0 0 16px;font-weight:400}
+.hero p{max-width:46ch;color:var(--muted);margin:0 0 26px}
+.btn{display:inline-block;background:var(--honey);color:#2b2208;font-weight:700;padding:13px 26px;border-radius:999px;text-decoration:none}
+.btn:hover{filter:brightness(.95)}
+.hero svg{width:100%;height:auto;max-height:430px}
+section{padding:54px 0}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 30px;max-width:56ch}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.dish{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:22px 22px 22px 6px;padding:16px}
+.dish svg{flex:0 0 112px;width:112px;height:84px;background:color-mix(in srgb,var(--honey) 16%,var(--card));border-radius:16px}
+.dish h3{margin:0;font-size:1.08rem}
+.dish p{margin:2px 0 6px;font-size:.93rem;color:var(--muted);line-height:1.45}
+.price{font-weight:700;color:var(--leaf)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center;border-top:1px solid var(--line)}
+.about svg{width:100%;height:auto;max-width:300px;margin:auto}
+.about p{color:var(--muted);margin:0 0 14px}
+.contact{background:var(--leaf);color:#f4f8f2;border-radius:30px;padding:44px 30px;text-align:center}
+.contact h2{color:#fff}
+.contact p{margin:0 auto 22px;max-width:48ch;color:#dbe9dd}
+.contact .btn{margin:4px}
+.contact .alt{background:transparent;color:#fff;border:2px solid #fff}
+footer{text-align:center;color:var(--muted);padding:34px 0 40px;font-size:.92rem}
+@media(max-width:760px){
+  .hero,.about{grid-template-columns:1fr}
+  .hero svg{max-height:300px;order:-1}
+  nav a:first-child{margin-left:0}
+  nav a{margin-left:14px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#">Hanımeli</a>
+    <nav><a href="#menu">Menü</a><a href="#hakkimizda">Hakkımızda</a><a href="#siparis">Sipariş</a></nav>
+  </header>
+
+  <main>
+  <div class="hero">
+    <div>
+      <h1>Anne eli değmiş, ev yapımı lezzetler</h1>
+      <p>Hanımeli'de her yemek sabırla, taze malzemelerle ve evdeki tarifle pişer. Sıcak sıcak kapınıza gelsin.</p>
+      <a class="btn" href="#menu">Menüye göz at</a>
+    </div>
+    <svg viewBox="0 0 400 400" role="img" aria-label="Hanımeli çiçeği çizimi">
+      <circle cx="200" cy="200" r="170" fill="#f0b83a" opacity=".18"/>
+      <path d="M200 390 C200 300 190 250 215 190" stroke="#2f5d43" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M198 330 C140 320 110 280 105 245 C160 250 195 280 198 330Z" fill="#3f7a58"/>
+      <path d="M205 280 C270 275 305 240 310 205 C250 205 210 235 205 280Z" fill="#2f5d43"/>
+      <g transform="translate(215 190)">
+        <g fill="#f0b83a"><ellipse rx="16" ry="62" transform="rotate(-70) translate(0 -58)"/><ellipse rx="16" ry="62" transform="rotate(-35) translate(0 -58)"/><ellipse rx="16" ry="62" transform="rotate(0) translate(0 -58)"/><ellipse rx="16" ry="62" transform="rotate(35) translate(0 -58)"/><ellipse rx="16" ry="62" transform="rotate(70) translate(0 -58)"/></g>
+        <g fill="#f2a9a1" opacity=".75"><ellipse rx="9" ry="46" transform="rotate(-52) translate(0 -50)"/><ellipse rx="9" ry="46" transform="rotate(-17) translate(0 -50)"/><ellipse rx="9" ry="46" transform="rotate(18) translate(0 -50)"/><ellipse rx="9" ry="46" transform="rotate(53) translate(0 -50)"/></g>
+        <circle r="14" fill="#fff4cf"/>
+      </g>
+      <g stroke="#b7791f" stroke-width="3" stroke-linecap="round"><path d="M215 190 l-10 -40"/><path d="M215 190 l8 -44"/><path d="M215 190 l24 -36"/></g>
+      <g fill="#b7791f"><circle cx="205" cy="148" r="5"/><circle cx="223" cy="144" r="5"/><circle cx="239" cy="153" r="5"/></g>
+    </svg>
+  </div>
+
+  <section id="menu">
+    <h2>Bugünün menüsü</h2>
+    <p class="sub">Her gün taze hazırlanır. Porsiyonlar doyurucu, tatlar tanıdık.</p>
+    <div class="menu">
+
+      <article class="dish">
+        <svg viewBox="0 0 120 90" role="img" aria-label="Mercimek çorbası">
+          <path d="M44 22c-6-6 6-8 0-16M60 24c-6-6 6-8 0-18M76 22c-6-6 6-8 0-16" stroke="#9aa89d" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <ellipse cx="60" cy="42" rx="40" ry="9" fill="#e48a2f"/>
+          <path d="M20 42a40 38 0 0 0 80 0Z" fill="#f4efe4" stroke="#2f5d43" stroke-width="3"/>
+          <ellipse cx="60" cy="42" rx="40" ry="9" fill="#e48a2f" stroke="#2f5d43" stroke-width="3"/>
+          <circle cx="50" cy="42" r="2.5" fill="#f7d58a"/><circle cx="68" cy="44" r="2.5" fill="#f7d58a"/>
+        </svg>
+        <div><h3>Mercimek çorbası</h3><p>Limon ve nane ile</p><span class="price">4 ₺</span></div>
+      </article>
+
+      <article class="dish">
+        <svg viewBox="0 0 120 90" role="img" aria-label="Yaprak sarma">
+          <ellipse cx="60" cy="58" rx="48" ry="20" fill="#f4efe4" stroke="#2f5d43" stroke-width="3"/>
+          <g fill="#4d8a5f" stroke="#2f5d43" stroke-width="2">
+            <rect x="26" y="40" width="40" height="15" rx="7.5" transform="rotate(-8 46 47)"/>
+            <rect x="54" y="38" width="40" height="15" rx="7.5" transform="rotate(6 74 45)"/>
+            <rect x="34" y="52" width="40" height="15" rx="7.5" transform="rotate(4 54 59)"/>
+            <rect x="52" y="56" width="36" height="14" rx="7" transform="rotate(-6 70 63)"/>
+          </g>
+          <path d="M92 38l10-8-3 14z" fill="#f0b83a"/>
+        </svg>
+        <div><h3>Yaprak sarma</h3><p>Zeytinyağlı, pirinç dolgulu</p><span class="price">9 ₺</span></div>
+      </article>
+
+      <article class="dish">
+        <svg viewBox="0 0 120 90" role="img" aria-label="Mantı">
+          <path d="M18 40a42 40 0 0 0 84 0Z" fill="#f4efe4" stroke="#2f5d43" stroke-width="3"/>
+          <ellipse cx="60" cy="40" rx="42" ry="10" fill="#fff" stroke="#2f5d43" stroke-width="3"/>
+          <g fill="#f3d9a3" stroke="#c99a46" stroke-width="1.5"><path d="M34 40l9-8 9 8z"/><path d="M52 42l9-8 9 8z"/><path d="M69 40l9-8 9 8z"/><path d="M45 36l8-7 8 7z"/><path d="M61 36l8-7 8 7z"/></g>
+          <path d="M30 41c10 4 50 4 60 0" stroke="#d9472b" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="5 5"/>
+        </svg>
+        <div><h3>Ev mantısı</h3><p>Yoğurt ve naneli tereyağı ile</p><span class="price">10 ₺</span></div>
+      </article>
+
+      <article class="dish">
+        <svg viewBox="0 0 120 90" role="img" aria-label="Peynirli börek">
+          <ellipse cx="60" cy="56" rx="50" ry="22" fill="#f4efe4" stroke="#2f5d43" stroke-width="3"/>
+          <g fill="#e6a43d" stroke="#a96a1a" stroke-width="2" stroke-linejoin="round">
+            <path d="M22 56l34-22 6 24z"/><path d="M64 36l34 20-30 8z"/><path d="M30 62l36 6-10 8z" fill="#efb75a"/>
+          </g>
+          <g fill="#fff3c9"><circle cx="46" cy="50" r="2"/><circle cx="80" cy="52" r="2"/><circle cx="58" cy="44" r="2"/></g>
+        </svg>
+        <div><h3>Peynirli börek</h3><p>Elde açılmış yufka</p><span class="price">6 ₺</span></div>
+      </article>
+
+      <article class="dish">
+        <svg viewBox="0 0 120 90" role="img" aria-label="Baklava">
+          <ellipse cx="60" cy="58" rx="50" ry="22" fill="#f4efe4" stroke="#2f5d43" stroke-width="3"/>
+          <g stroke="#a96a1a" stroke-width="2" stroke-linejoin="round">
+            <path d="M24 56l16-16 16 16-16 14z" fill="#f0b83a"/><path d="M54 52l16-16 16 16-16 14z" fill="#f4c658"/><path d="M40 62l16-12 16 12-16 12z" fill="#e6a43d"/>
+          </g>
+          <g fill="#6f9a3c"><circle cx="40" cy="56" r="3"/><circle cx="70" cy="52" r="3"/><circle cx="56" cy="62" r="3"/></g>
+        </svg>
+        <div><h3>Fıstıklı baklava</h3><p>Şerbeti dengeli, katları çıtır</p><span class="price">8 ₺</span></div>
+      </article>
+
+      <article class="dish">
+        <svg viewBox="0 0 120 90" role="img" aria-label="Elmalı kek">
+          <ellipse cx="60" cy="66" rx="48" ry="12" fill="#f4efe4" stroke="#2f5d43" stroke-width="3"/>
+          <path d="M26 64V40a34 24 0 0 1 68 0v24a34 10 0 0 1-68 0Z" fill="#d9964a" stroke="#a96a1a" stroke-width="2"/>
+          <path d="M26 44c10 8 20-8 34 0s24-8 34 0" stroke="#fff3c9" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <g fill="#f2a9a1"><path d="M48 32c4-6 8-6 12 0-4 6-8 6-12 0Z"/><path d="M64 30c4-6 8-6 12 0-4 6-8 6-12 0Z"/></g>
+        </svg>
+        <div><h3>Elmalı tarçınlı kek</h3><p>Her sabah fırından</p><span class="price">5 ₺</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="hakkimizda" class="about">
+    <svg viewBox="0 0 300 300" role="img" aria-label="Tencere ve hanımeli dalı">
+      <circle cx="150" cy="150" r="130" fill="#f2a9a1" opacity=".25"/>
+      <path d="M70 130h160v50a60 50 0 0 1-60 50h-40a60 50 0 0 1-60-50z" fill="#2f5d43"/>
+      <rect x="58" y="122" width="184" height="14" rx="7" fill="#3f7a58"/>
+      <path d="M70 150h-22M230 150h22" stroke="#2f5d43" stroke-width="9" stroke-linecap="round"/>
+      <path d="M118 108c-8-10 8-14 0-26M150 108c-8-10 8-14 0-30M182 108c-8-10 8-14 0-26" stroke="#8aa291" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <g fill="#f0b83a"><ellipse cx="96" cy="190" rx="9" ry="22" transform="rotate(-30 96 190)"/><ellipse cx="116" cy="196" rx="9" ry="22"/><ellipse cx="136" cy="192" rx="9" ry="22" transform="rotate(25 136 192)"/></g>
+    </svg>
+    <div>
+      <h2>Bizim hikâyemiz</h2>
+      <p>Hanımeli, mutfaktan taşan bir sevgiyle başladı. Büyüklerimizden öğrendiğimiz tarifleri, evdeki gibi küçük kazanlarda ve katkısız pişiriyoruz.</p>
+      <p>Hazır sos, koruyucu ya da acele yok. Sadece taze malzeme, tereyağı, zeytinyağı ve bolca emek var.</p>
+    </div>
+  </section>
+
+  <section id="siparis">
+    <div class="contact">
+      <h2>Sipariş vermek çok kolay</h2>
+      <p>Bir gün önceden arayın veya yazın, yemekleriniz taze hazırlanıp size ulaştırılsın.</p>
+      <a class="btn" href="tel:+900000000000">Hemen ara</a>
+      <a class="btn alt" href="mailto:merhaba@hanimeli.example">E-posta gönder</a>
+    </div>
+  </section>
+  </main>
+
+  <footer>© 2026 Hanımeli – Ev Yapımı Yemekler</footer>
+</div>
+</body>
+</html>
